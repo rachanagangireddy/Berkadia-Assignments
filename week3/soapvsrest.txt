@@ -1,0 +1,59 @@
+Simple Object Access Protocol (SOAP) and Representational State Transfer (REST)
+
+SOAP relies exclusively on XML to provide messaging services.
+Microsoft originally developed SOAP to take the place of older technologies that don’t work well on the Internet such as the Distributed Component Object Model (DCOM) and Common Object Request Broker Architecture (CORBA). These technologies fail because they rely on binary messaging; 
+the XML messaging that SOAP employs works better over the Internet.
+The point is that SOAP is highly extensible, but you only use the pieces you need for a particular task.
+For example, when using a public Web service that’s freely available to everyone, you really don’t have much need for WS-Security.
+
+The XML used to make requests and receive responses in SOAP can become extremely complex. 
+In some programming languages, you need to build those requests manually, which becomes problematic because SOAP is intolerant of errors. However, other languages can use shortcuts that SOAP provides; that can help you reduce the effort required to create the request and to parse the response. In fact, when working with .NET languages, you never even see the XML.
+
+Part of the magic is the Web Services Description Language (WSDL). 
+This is another file that’s associated with SOAP. 
+It provides a definition of how the Web service works, so that when you create a reference to it,
+the IDE can completely automate the process. So, the difficulty of using SOAP depends to a large degree on the language you use.
+
+One of the most important SOAP features is built-in error handling.
+If there’s a problem with your request, the response contains error information that you can use to fix the problem. 
+An interesting SOAP feature is that you don’t necessarily have to use it with the HyperText Transfer Protocol (HTTP) transport.
+
+
+REST WEB SERVICE
+Many developers found SOAP cumbersome and hard to use. For example, working with SOAP in JavaScript means writing a ton of code to perform extremely simple tasks because you must create the required XML structure absolutely every time.
+
+REST provides a lighter weight alternative. Instead of using XML to make a request, REST relies on a simple URL in many cases. In some situations you must provide additional information in special ways, but most Web services using REST rely exclusively on obtaining the needed information using the URL approach. REST can use four different HTTP 1.1 verbs (GET, POST, PUT, and DELETE) to perform tasks.
+
+Unlike SOAP, REST doesn’t have to use XML to provide the response. You can find REST-based Web services that output the data in Command Separated Value (CSV), JavaScript Object Notation (JSON) and Really Simple Syndication (RSS). The point is that you can obtain the output you need in a form that’s easy to parse within the language you need for your application.
+
+As an example of working with REST, you could create a URL for Weather Underground.
+The API’s documentation page shows an example URL of http://api.wunderground.com/api/Your_Key/conditions/q/CA/San_Francisco.json. 
+The information you receive in return is a JSON formatted document containing the weather for San Francisco.
+You can use your browser to interact with the Web service, which makes it a lot easier to create the right URL and 
+verify the output you need to parse with your application.
+
+ Between SOAP and REST
+Before you spend hours fretting over the choice between SOAP and REST,
+consider that some Web services support one and some the other.
+Unless you plan to create your own Web service,
+the decision of which protocol to use may already be made for you. 
+Extremely few Web services, such as Amazon, support both. 
+------------------------------------------------------------------------------------------------------------------------------------------
+SOAP VS REST
+SOAP is definitely the heavyweight choice for Web service access.
+It provides the following advantages when compared to REST:
+
+Language, platform, and transport independent (REST requires use of HTTP)
+Works well in distributed enterprise environments (REST assumes direct point-to-point communication)
+Standardized
+Provides significant pre-build extensibility in the form of the WS* standards
+Built-in error handling
+Automation when used with certain language products
+
+REST is easier to use for the most part and is more flexible. 
+It has the following advantages when compared to SOAP:
+No expensive tools require to interact with the Web service
+Smaller learning curve
+Efficient (SOAP uses XML for all messages, REST can use smaller message formats)
+Fast (no extensive processing required)
+Closer to other Web technologies in design philosophy
