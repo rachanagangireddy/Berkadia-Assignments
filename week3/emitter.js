@@ -1,0 +1,20 @@
+/** include events module
+events module has one simple class "EventEmitter".
+The following code provides a small code sample where 
+we subscribe to an event and then raise it.
+*/
+var EventEmitter = require('events').EventEmitter; 
+var emitter = new EventEmitter(); 
+
+// Subscribe 
+emitter.on('foo', function (arg1, arg2) {
+   console.log('Foo raised, Args:', arg1, arg2); 
+}); 
+
+// Emit 
+emitter.emit('foo', { a: 123 }, { b: 456 }); 
+
+/*output:
+PS C:\Users\sai rachana\Desktop\nodejsprograms> node emitter.js
+Foo raised, Args: { a: 123 } { b: 456 }
+*/
