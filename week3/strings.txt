@@ -1,0 +1,108 @@
+String functions in javascript------
+in node js just use console.log() to print onto the screen
+
+String Length
+The length property returns the length of a string:
+ex:
+<script>
+var text ="Berkadia";
+alert("length of text is:"+text.length);
+</script>
+
+Finding a String in a String
+The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+ex:
+var str = "Place Berkadia occurs!";
+var pos = str.indexOf("Berkadia");
+JavaScript counts positions from zero.
+0 is the first position in a string, 1 ,..........
+
+The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+ex:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");
+
+indexOf(arg1,arg2):finds arg1 in length specified by arg2
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate",15);//
+7
+
+
+There are 3 methods for extracting a part of a string:
+slice(start, end)
+substring(start, end)
+substr(start, length)
+The slice() Method
+slice() extracts a part of a string and returns the extracted part in a new string.
+
+The method takes 2 parameters: the starting index (position), and the ending index (position).
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);//Banana
+If a parameter is negative, the position is counted from the end of the string.
+
+This example slices out a portion of a string from position -12 to position -6
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(-12, -6);
+The result of res will be:
+Banana
+
+substring() is similar to slice().
+
+The difference is that substring() cannot accept negative indexes.
+ex:
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);
+The result of res will be:
+Banana
+
+Replacing String Content
+The replace() method replaces a specified value with another value in a string:
+ex:
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+
+Converting to Upper and Lower Case
+A string is converted to upper case with toUpperCase():
+ex:
+var text1 = "Hello World!";       // String
+var text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+A string is converted to lower case with toLowerCase():
+ex:
+var text1 = "Hello World!";       // String
+var text2 = text1.toLowerCase();  // text2 is text1 converted to lowercase
+
+The concat() Method
+concat() joins two or more strings:
+
+Example
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+
+String.trim()
+String.trim() removes whitespace from both sides of a string.
+ex:
+var str = "       Hello World!        ";
+alert(str.trim());//Hello World!
+
+The charAt() Method
+The charAt() method returns the character at a specified index (position) in a string:
+ex:
+var str = "HELLO WORLD";
+str.charAt(0);   // returns H
+
+The charCodeAt() Method
+The charCodeAt() method returns the unicode of the character at a specified index in a string:
+The method returns a UTF-16 code (an integer between 0 and 65535).
+ex:
+var str = "HELLO WORLD";
+str.charCodeAt(0);  // returns 72
+
+Converting a String to an Array
+A string can be converted to an array with the split() method:
+ex:
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
+
