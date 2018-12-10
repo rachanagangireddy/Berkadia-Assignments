@@ -1,0 +1,36 @@
+WHAT IS DOS ?
+   DoS stands for Denial of services. 
+   The DoS is a malicious attempt by a single person or a group of people to make a victim site or node to deny service to its intended users. 
+   Basically sending more requests than a capacity of a web server.
+
+WHAT IS DDOS ?
+    DDoS stands for Distributed Denial Of Services.
+      it is more powerful than DoS attack.
+    When the attack is performed from one source to one destination its DoS attack and when an attack is performed from multiple sources to one Destination its DDoS. 
+    A DoS or DDoS attackers often targets the high-profile sites or services hosted on high-profile servers such as a bank, payment gateway etc.
+    
+USE OF DDOS ::----
+The purpose of DDoS or Dos is to consume all the resources of victim site or network 
+BECAUSE OF THIS other people will not able to access them. 
+All resources of web server are exhausts so, the legitimate users are not able to access any services of a web server. DoS attack the following services:
+
+Network Bandwith
+Memory Usage
+I/O Usage
+CPU Usage
+Database Connection Pool
+
+SYMPTOMS WHICH CAUSE DDOS:---
+Unusually slow network performance (opening files or accessing websites)
+Unavailability of a particular website
+Inability to access any website
+The dramatic increase in the amount of spam you receive in your account
+
+How TO PREVENT ?????
+Prevention From DDoS Attack can be done 
+Use VPS hosting with high bandwidth.
+Use third-party DDoS protection services such as CloudFlare.
+RPF Checking of Server Addresses. Reverse Path Forwarding largely prevents a server from spoofing the address of a server in a different domain.
+Configure the firewall to restrict incoming and outgoing traffic.
+Applying email filters may help you manage unwanted traffic.
+Get protocols and firewall updated.
