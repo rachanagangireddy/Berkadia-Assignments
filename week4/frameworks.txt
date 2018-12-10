@@ -1,3 +1,15 @@
+
+
+Node.js :
+--------
+Node.js is an open source, cross-platform runtime environment for server-side and networking applications.
+Node.js applications are written in JavaScript. 
+Node.js provides an event-driven architecture and a non-blocking I/O API that optimizes an application’s throughput and scalability. 
+These technologies are commonly used for real-time web applications.
+Node.js is also called as server side javascript which supports non-blocking event driven IO operations.
+
+Frameworks in Node.js
+
 Full Stack
 The following frameworks focus on full-stack support. 
 They cover every step of the application’s development, from middleware and UIs to APIs and database integration.
