@@ -1,0 +1,64 @@
+Full Stack
+The following frameworks focus on full-stack support. 
+They cover every step of the application’s development, from middleware and UIs to APIs and database integration.
+
+1.Hapi
+ ideal for rapid builds and the API tests, but you can also build the full website with Hapi. 
+It has a great collection of plugins that enables it to be worked on in sections without breaking the rest of the code base. 
+
+2.Koa
+This is a callback-less, lightweight middleware framework, that allows you to write web applications and REST APIs. 
+You can also add new features and customize anything along the path. It supports ES6 and the latest JavaScript release.
+This is not the best framework for a first-time user.
+
+3.Express
+It's fast, unopinionated, minimalist and an efficient middleware routing framework.
+Express is one of the most essential Node frameworks and is ideal for building the web/mobile applications and APIs.
+
+4.Keystone
+This framework is ideal for database driven web applications and APIs, where Express, 
+MongoDB and Mongoose are key components of the Node stack.
+
+5.Meteor
+This is a model-view controller (MVC) framework for building a real-time web application, that constantly synchronize with the server. 
+It's in-built set of pre-written, self-contained modules supports writing application codes.
+Applications build with Meteor can be run on OS X, Windows and Linux operating systems.
+It is an opinionated framework.
+
+
+The following frameworks are heavily API-driven
+6.Actionhero
+This is a fast, lightweight and multi-transport API Server for Node.js that is ideal to create an easy to use toolkit to make reusable and scalable APIs.
+Actionhero delivers high-end support (e.g. integrated via JSON) but also works on a low-level (e.g. communicating with TCP protocols). It's cluster-ready, with built-in support for background tasks, zero downtime deployment and it delivers like a CDN without a need to run Apache or Nginx.
+
+7.Loopback
+This is a highly extensible API framework created by IBM, that allows you to create dynamic end-to-end REST APIs with very little coding. 
+It complements Express framework by making an easy API tool for developers.
+Loopback API's can connect devices and integrate with Android, iOS and AngularJS SDKs to create client apps.
+For the graphical edition of the application, Loopback uses StrongLoop Arc.
+
+8.Restify
+This is a lightweight framework created to build REST APIs. It is a server-side framework for serving up data through API.
+Restify focuses on debugging and profiling that would allow you to optimize your server.
+
+9.Socket.io
+The aim of this framework is to support real-time web applications (e.g. document collaboration and data exchange).
+Socket.io allows event-driven communications between web clients and servers; 
+and it works like a client-side library in the browser, it also has a server side library for Node.js.
+
+10. Mojito
+It is a JavaScript framework based on Yahoo! Cocktails, a mobile application development platform introduced by Yahoo! Developer Network. JavaScript is the only programming language which is used for Yahoo! Cocktails Platform. Since client and server components are both written in JavaScript, Mojito can run on both the client side (browser) and the server (Node.js).
+a model-view controller (MVC) framework offering a gamut of features, such as
+Convenient data fetching.
+Local development environment and tools (Yahoo! independent stack).
+Integrated unit testing.
+Library for simplifying internationalization & localization.
+
+11. Derby
+Derby is a model-view controller (MVC) JavaScript framework for both client-side and server-side. 
+It is ideal for creating real-time mobile and web applications. Derby's Racer, a real-time data synchronization engine for Node.js allows multi-site, real-time concurrency and data synchronization across clients and servers.
+By leveraging ShareJS, Racer optimizes conflict resolution algorithm and allows real-time editing within an application. Moreover, server rendering is one such feature of Derby that allows fast page loads, 
+search engine support and HTML templates to render in the browser or on the server.
+
+
+
