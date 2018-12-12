@@ -1,0 +1,37 @@
+  Monolithic vs Microservice Architecture
+
+> Monolithic Architecture :---
+ What is Monolithic ?
+  Monolithic means composed all in one piece i.e. code components are interconnected and interdependent.
+  For example,consider MVC, when a web client (browser) sends a request, the following happens:
+               The business layer performs the business logic.
+               Data access layer performs database collects/stores specific tasks.
+               Presentation layer shows the data to the user.
+         This actually same code maintains all the code (presentation, business and data access layer).     
+ >>>> Benefits of Monolithic Architecture:
+  >>Complexity
+  >>Deployability
+  >>Testing
+  >>Handling Failure
+ 
+        ------------------------------------------------------------------------------------------------------------------------- 
+
+> Microservice Architecture
+In general,What is microservice ?
+   Microservice :
+                 A self-contained, well-defined, small and independently deployable unit.
+                 Which does not depend on the state of other services.
+
+This is to split application into a set of smaller, interconnected services instead of building a single monolithic application.
+
+Each microservice is a small application that has its own architecture, consisting of business logic along with various adapters.
+>>>>> Benifits of Microservice Architecture:
+>>Easier to understand and maintain
+>>Adopting new technologies
+>>Scalable and Cost effective
+
+Finally.............
+  Microservice based architecture provides a lot of ways to handle a complex system, but have own  challenges and complexities. 
+ Useful, if application is really big, complex, and does a lot of different things.
+ 
+ In case of a simple application, monolithic architecture is a better approach.
