@@ -1,0 +1,44 @@
+What is Middleware ?
+
+Middleware functions are functions that have access to the request object (req), the response object (res),
+and the next middleware function in the application’s request-response cycle.
+
+A middleware is basically a function that will the receive the Request and Response objects, just like your route Handlers do. 
+As a third argument you have another function which you should call once your middleware code completed.
+Middleware functions can perform the following tasks:
+>Execute any code.
+>Make changes to the request and the response objects.
+>End the request-response cycle.
+>Call the next middleware function in the stack.
+
+ex:--
+
+function myMiddleware (req, res, next) {
+  getSomeData()
+  .then(function (data) {
+    req.somedata = data
+    next()
+  })
+}
+
+If there is an error and you don’t want any further code to be executed, just don’t call that function. 
+Remember to send a response in that case, otherwise the client would be left waiting for a response until it times out:
+
+function myMiddleware (req, res, next) {
+  getSomeData()
+  .then(function (data) {
+    req.somedata = data
+    next()
+  })
+  .catch(function (error) {
+    res.status(500).send(error.message)
+  })
+}
+
+>> Types of MIDDLEWARE:
+->Application-level middleware
+->Router-level middleware
+->Error-handling middleware
+->Built-in middleware
+->Third-party middleware
+
