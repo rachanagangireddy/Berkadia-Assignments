@@ -1,0 +1,25 @@
+
+Property binding is a one-way data binding from data source to view target.
+ex:
+in html:
+<img [src]="imgpath"/>
+in .ts file
+imgpath:string="www/files/logo.png";//path of image
+
+
+Different types
+Angular 2 Property Binding Example:
+Property binding is a one-way data binding from data source to view target. 
+Property binding is performed with component property, HTML element and angular 2 directives.
+1>>Component property binding is used for communication between parent and child component because using this binding
+we can send property values from parent to child component.
+2>>In element property binding the DOM property of HTML element can be assigned with a value of component property.
+3>>In directive property binding we can assign component property values to angular 2 directives. 
+Component property binding is performed as below.
+<my-msg  prefixMsg= "Website name is " [siteName] = "website.name"> </my-msg>
+
+Element property binding is performed as below.
+<a [href]="website.url" [textContent]="website.name"> </a>
+
+Directive property binding is performed as below.
+<p [ngClass]="'one two'"> Angular 2 Property Binding Example </p> 
