@@ -1,0 +1,17 @@
+The router navigate method takes the same one-item link parameters array that you can bind to a [routerLink] directive.
+
+in html file:
+<button (click)="gotohome()">Gotonewhome</button>
+
+in ts file:
+using navigate(['path'])
+gotohome():any{
+   this.router.navigate(['/newhome']);
+ }
+ only advantage can give parameters by keeping comma also
+ 
+ we can also use navigateByUrl('name') :
+ 
+ gotohome():any{
+   this.router.navigateByUrl('newhome');
+ }
