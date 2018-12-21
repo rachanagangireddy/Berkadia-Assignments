@@ -1,0 +1,12 @@
+Event Binding
+
+Event binding is a data binding from an element to a component. 
+Data obtained from user actions such as keystrokes, mouse movements, clicks, and touches can be bound to component property using event binding.
+In the event binding, target will be an event name. 
+Target event is enclosed within parenthesis ( ) or can be used with canonical form using prefix on- to perform event binding. 
+Target event is written to the left side of equal sign. 
+
+.html code:
+<button (click)="validate()">check</button> 
+.ts code:
+define method in ts file ,event triggers when we click button
