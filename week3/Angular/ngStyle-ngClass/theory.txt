@@ -1,0 +1,21 @@
+
+Inorder to give styles we have many ways
+>.css file
+>inline
+>ngStyle property
+>style tag
+
+>>>>ngStyle propert
+
+<some-element [ngStyle]="{'font-style': styleExp}">...</some-element>
+
+<some-element [ngStyle]="{'max-width.px': widthExp}">...</some-element>
+
+<some-element [ngStyle]="objExp">...</some-element>
+
+
+ngClass:
+
+<some-element [ngClass]="'first second'">...</some-element>
+
+<some-element [ngClass]="['first', 'second']">...</some-element>
