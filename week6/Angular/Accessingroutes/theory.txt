@@ -1,0 +1,26 @@
+Routes tell the router which view to display when a user clicks a link or pastes a URL into the browser address bar.
+
+A typical Angular Route has two properties:
+
+path: a string that matches the URL in the browser address bar.
+component: the component that the router should create when navigating to this route.
+also some other like:
+pathmatch:full,...
+redirectTo:component name,
+
+RouterModule.forRoot():
+
+You first must initialize the router and start it listening for browser location changes.
+
+Add RouterModule to the @NgModule.imports array and configure it with the routes in one step by calling RouterModule.forRoot() within the imports array, like this:
+
+imports: [ RouterModule.forRoot(routes) ],
+
+Add RouterOutlet:-
+The RouterOutlet is one of the router directives that became available to the AppComponent because AppModule imports AppRoutingModule which exported RouterModule.
+
+<router-outlet></router-outlet>
+
+Add a navigation link (routerLink):
+
+Users shouldn't have to paste a route URL into the address bar. They should be able to click a link to navigate.
