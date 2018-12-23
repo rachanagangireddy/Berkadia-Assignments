@@ -1,0 +1,551 @@
+1.docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
+ef946d1e0273        my-nodejs-app       "npm start"         3 minutes ago       Up 3 minutes        0.0.0.0:3000->3000/tcp   my-production-running-app
+
+
+2.docker run hello-world
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+3.docker commit
+"docker commit" requires at least 1 and at most 2 arguments.
+See 'docker commit --help'.
+Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] [flags]
+Create a new image from a container's changes
+
+4.docker history
+"docker history" requires exactly 1 argument.
+See 'docker history --help'.
+Usage:  docker history [OPTIONS] IMAGE [flags]
+Show the history of an image
+
+
+
+5.docker history [OPTIONS] IMAGE [flags]
+Show the history of an image
+$ docker info
+Containers: 2
+ Running: 1
+ Paused: 0
+ Stopped: 1
+Images: 13
+Server Version: 18.03.1-ce
+Storage Driver: overlay
+ Backing Filesystem: extfs
+ Supports d_type: true
+Logging Driver: json-file
+Cgroup Driver: cgroupfs
+Plugins:
+ Volume: local
+ Network: bridge host macvlan null overlay
+ Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog
+Swarm: inactive
+Runtimes: runc
+Default Runtime: runc
+Init Binary: docker-init
+containerd version: 773c489c9c1b21a6d78b5c538cd395416ec50f88
+runc version: 4fc53a81fb7c994640722ac585fa9ca548971871
+init version: 949e6fa
+Security Options:
+ seccomp
+  Profile: default
+Kernel Version: 4.14.67-1-lts
+Operating System: Arch Linux
+OSType: linux
+Architecture: x86_64
+CPUs: 1
+Total Memory: 737.5MiB
+Name: host01
+ID: D7MQ:SUAX:OKIZ:3QQE:SOA4:S7VI:5IYK:XGYD:SHSR:7LNM:UTOP:MCWO
+Docker Root Dir: /var/lib/docker
+Debug Mode (client): false
+Debug Mode (server): false
+Registry: https://index.docker.io/v1/
+Labels:
+Experimental: false
+Insecure Registries:
+ 127.0.0.0/8
+Live Restore Enabled:false
+
+
+6.docker help
+Usage:  docker COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/scrapbook/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default
+                           "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/home/scrapbook/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/scrapbook/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/scrapbook/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command
+
+
+
+7.docker create rachna
+Unable to find image 'rachna:latest' locally
+Error response from daemon: pull access denied for rachna, repository does not exist or may require 'docker login'
+
+
+
+8.docker save --help
+
+Usage:  docker save [OPTIONS] IMAGE [IMAGE...]
+
+Save one or more images to a tar archive (streamed to STDOUT by default)
+
+Options:
+  -o, --output string   Write to a file, instead of STDOUT
+
+9.docker search rachna
+NAME                                 DESCRIPTION         STARS               OFFICIAL            AUTOMATED
+rachnajarvis/hercules-base                                     0
+rachnadocker1/rachna.tomcat8                             0
+rachna17/sshdcont                                                   0
+rachna17/exit                                                            0
+dockerrachna/rachna.mistry_tomcat8                  0
+rachnaregac/get-started                                        0
+rachnaregac/rachna                                              0
+
+
+10.docker start
+"docker start" requires at least 1 argument.
+See 'docker start --help'.
+Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...] [flags]
+Start one or more stopped containers
+
+
+
+11.docker version
+Client:
+ Version:      18.05.0-ce
+ API version:  1.37
+ Go version:   go1.9.5
+ Git commit:   f150324
+ Built:        Wed May  9 22:16:25 2018
+ OS/Arch:      linux/amd64
+ Experimental: false
+ Orchestrator: swarm
+
+Server:
+ Engine:
+  Version:      18.03.1-ce
+  API version:  1.37 (minimum version 1.12)
+  Go version:   go1.9.5
+  Git commit:   9ee9f40
+  Built:        Thu Apr 26 07:23:03 2018
+  OS/Arch:      linux/amd64
+  Experimental: false
+
+
+
+12. docker top
+"docker top" requires at least 1 argument.
+See 'docker top --help'.
+
+Usage:  docker top CONTAINER [ps OPTIONS]
+
+Display the running processes of a container
+
+
+
+13.docker volume
+
+Usage:  docker volume COMMAND
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+
+Run 'docker volume COMMAND --help' for more information on a command.
+
+
+14. docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+my-nodejs-app       latest              1e207b478e29        37 minutes ago      77MB
+node                10-alpine           01379e6790c7        31 hours ago        70.7MB
+hello-world         latest              4ab4c602aa5e        3 months ago        1.84kB
+ubuntu              latest              16508e5c265d        4 months ago        84.1MB
+redis               latest              4e8db158f18d        4 months ago        83.4MB
+weaveworks/scope    1.9.1               4b07159e407b        5 months ago        68MB
+alpine              latest              11cd0b38bc3c        5 months ago        4.41MB
+
+
+
+15. pine              latest              11cd0b38bc3c        5 months ago        4.41MB
+$ docker image
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+
+
+
+16.docker config
+docker config : Manage Docker configs
+Usage:  docker config COMMAND
+
+Manage Docker configs
+
+Commands:
+  create      Create a config from a file or STDIN
+  inspect     Display detailed information on one or more configs
+  ls          List configs
+  rm          Remove one or more configs
+
+17.docker exec	
+Run a command in a running container
+
+
+18.
+The command to run the built image is 
+docker run -p 8001:8001 exx
+hello
+hello world in port localhost:8001
+
+
+19.The command to build the image is 
+docker build -t exx .
+Sending build context to Docker daemon  3.072kB
+Step 1/4 : FROM node:6.9.3
+ ---> 279108aa86a2
+Step 2/4 : COPY index.js .
+ ---> 651186c4b6c6
+Step 3/4 : EXPOSE 8001
+ ---> Running in da65e003e674
+Removing intermediate container da65e003e674
+ ---> e02bafb752ee
+Step 4/4 : CMD [ "node", "index.js" ]
+ ---> Running in 4f9a73b7eeef
+Removing intermediate container 4f9a73b7eeef
+ ---> 101eb9d57bbd
+Successfully built 101eb9d57bbd
+Successfully tagged exx:latest
+
+20.docker run imgname
+docker run ex2
+hello world
+
+
+21.connect mysql db
+$ docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypass mysql
+Unable to find image 'mysql:latest' locally
+latest: Pulling from library/mysql
+a5a6f2f73cd8: Pulling fs layer
+936836019e67: Pull complete
+283fa4c95fb4: Pull complete
+1f212fb371f9: Pull complete
+e2ae0d063e89: Pull complete
+5ed0ae805b65: Pull complete
+0283dc49ef4e: Pull complete
+a7e1170b4fdb: Pull complete
+88918a9e4742: Pull complete
+241282fa67c2: Pull complete
+b0fecf619210: Pull complete
+bebf9f901dcc: Pull complete
+Digest: sha256:b7f7479f0a2e7a3f4ce008329572f3497075dc000d8b89bac3134b0fb0288de8
+Status: Downloaded newer image for mysql:latest
+Initializing database
+2018-12-22T11:37:33.955559Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2018-12-22T11:37:33.955767Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.13) initializing of server in progress as process 27
+2018-12-22T11:37:40.474319Z 5 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2018-12-22T11:37:44.493810Z 5 [Warning] [MY-010315] [Server] 'user' entry 'mysql.infoschema@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:44.494781Z 5 [Warning] [MY-010315] [Server] 'user' entry 'mysql.session@localhost' ignoredin --skip-name-resolve mode.
+2018-12-22T11:37:44.495053Z 5 [Warning] [MY-010315] [Server] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:44.495397Z 5 [Warning] [MY-010315] [Server] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:44.495658Z 5 [Warning] [MY-010323] [Server] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:44.495848Z 5 [Warning] [MY-010323] [Server] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:44.496066Z 5 [Warning] [MY-010311] [Server] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:44.496538Z 5 [Warning] [MY-010330] [Server] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:44.496718Z 5 [Warning] [MY-010330] [Server] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:45.528732Z 0 [System] [MY-013170] [Server] /usr/sbin/mysqld (mysqld 8.0.13) initializing of server has completed
+Database initialized
+MySQL init process in progress...
+2018-12-22T11:37:48.311671Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2018-12-22T11:37:48.311848Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.13) starting as process 78
+MySQL init process in progress...
+MySQL init process in progress...
+mbind: Operation not permitted
+2018-12-22T11:37:50.470026Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2018-12-22T11:37:50.472814Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2018-12-22T11:37:50.487819Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.infoschema@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:50.488074Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.session@localhost' ignoredin --skip-name-resolve mode.
+2018-12-22T11:37:50.488261Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:50.488459Z 0 [Warning] [MY-010315] [Server] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:50.488681Z 0 [Warning] [MY-010323] [Server] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:50.488861Z 0 [Warning] [MY-010323] [Server] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:50.489065Z 0 [Warning] [MY-010311] [Server] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:50.493695Z 0 [Warning] [MY-010330] [Server] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:50.493885Z 0 [Warning] [MY-010330] [Server] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:37:50.503977Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.13'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+2018-12-22T11:37:50.628886Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock'
+Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+2018-12-22T11:38:02.220317Z 10 [Warning] [MY-010315] [Server] 'user' entry 'mysql.infoschema@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:02.221012Z 10 [Warning] [MY-010315] [Server] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:02.221292Z 10 [Warning] [MY-010315] [Server] 'user' entry 'mysql.sys@localhost' ignored in--skip-name-resolve mode.
+2018-12-22T11:38:02.221578Z 10 [Warning] [MY-010315] [Server] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:02.221968Z 10 [Warning] [MY-010323] [Server] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:02.222185Z 10 [Warning] [MY-010323] [Server] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:02.222463Z 10 [Warning] [MY-010311] [Server] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:02.223001Z 10 [Warning] [MY-010330] [Server] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:02.223223Z 10 [Warning] [MY-010330] [Server] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+
+2018-12-22T11:38:04.630519Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.13)  MySQL Community Server - GPL.
+
+MySQL init process done. Ready for start up.
+
+2018-12-22T11:38:05.422425Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2018-12-22T11:38:05.422639Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.13) starting as process 1
+2018-12-22T11:38:06.778486Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2018-12-22T11:38:06.785604Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2018-12-22T11:38:06.839873Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.infoschema@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:06.840284Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.session@localhost' ignoredin --skip-name-resolve mode.
+2018-12-22T11:38:06.840529Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:06.840790Z 0 [Warning] [MY-010315] [Server] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:06.841118Z 0 [Warning] [MY-010323] [Server] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:06.841321Z 0 [Warning] [MY-010323] [Server] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:06.841526Z 0 [Warning] [MY-010311] [Server] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:06.847246Z 0 [Warning] [MY-010330] [Server] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:06.847471Z 0 [Warning] [MY-010330] [Server] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-12-22T11:38:06.857018Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.13'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2018-12-22T11:38:07.004535Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock' bind-address: '::' port: 33060
+
+22.docker attach -attach local standard input, output, and error streams to a running container
+docker attach --help
+
+Usage:  docker attach [OPTIONS] CONTAINER
+
+Attach local standard input, output, and error streams to a running container
+
+Options:
+      --detach-keys string   Override the key sequence for detaching a container
+      --no-stdin             Do not attach STDIN
+      --sig-proxy            Proxy all received signals to the process (default true)
+
+
+23.docker attach --no-stdin
+Usage:  docker attach [OPTIONS] CONTAINER [flags]
+Attach local standard input, output, and error streams to a running container
+
+
+
+24.docker chechpoint
+docker checkpoint create
+docker checkpoint create is only supported on a Docker daemon with experimental features enabled
+
+25
+$ docker checkpoint ls
+docker checkpoint ls is only supported on a Docker daemon with experimental features enabled
+
+26.docker
+
+Usage:  docker COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/scrapbook/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/scrapbook/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/scrapbook/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/scrapbook/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+
+27.
+$ docker exec --help
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+
+Options:
+  -d, --detach               Detached mode: run command in the background
+      --detach-keys string   Override the key sequence for detaching a container
+  -e, --env list             Set environment variables
+  -i, --interactive          Keep STDIN open even if not attached
+      --privileged           Give extended privileges to the command
+  -t, --tty                  Allocate a pseudo-TTY
+  -u, --user string          Username or UID (format: <name|uid>[:<group|gid>])
+  -w, --workdir string       Working directory inside the container
+
+
+28.$ docker create -t -i fedora bash
+Unable to find image 'fedora:latest' locally
+latest: Pulling from library/fedora
+cd6c8343b590: Pull complete
+Digest: sha256:50dfa96dd7002374d0ad590cef2de46f68730a8d65d5ea6fb72ff8716630c89f
+Status: Downloaded newer image for fedora:latest
+d912f00679238d874c3177e51aa3a61dfcdb1ae159fa604d7a34657232891b60
+
+
+29.docker container ls
+$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                  NAMES
+34dc2658c2c8        my-nodejs-app       "npm start"         24 minutes ago      Up 24 minutes       0.0.0.0:3000->3000/tcp   my-running-app
+
+30.docker container start	Start one or more stopped containers
+docker container stats	Display a live stream of container(s) resource usage statistics
+docker container stop	                   Stop one or more running containers
+docker container top              	Display the running processes of a container
