@@ -1,0 +1,37 @@
+What is Docker ?
+Docker is a computer program that performs operating-system-level virtualization also known as containerization. 
+It was first released in 2013 and is developed by Docker, Inc.
+
+
+What is a Container
+A standardized unit of software
+A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
+A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: 
+code, runtime, system tools, system libraries and settings.
+
+Why use Docker for Development?
+
+Here’s some of the benefits of leveraging docker for development purposes.
+
+Consistent development environments for the entire team. All developers use the same OS, same system libraries, same language runtime, independent of the host OS.
+The development environment is exactly the same as the production environment.
+If you’re having a hard time building / compiling the application code, then build it inside Docker.
+This primarily applies to developers using MacOS and Windows.
+
+With application development using Docker, you don’t need to install a bunch of language environments on your system. 
+You can simply run the ruby / python / java application inside docker container with the help of a Ruby /Python / JAVA Docker image respectively.
+With Docker, you can use different versions of same programming language without having to resort to all the hack arounds for the language on your machine.
+Deployment is easy. 
+
+If it runs in your container, it will run on your server just the same. 
+Just package up your code and deploy it on a server with the same image or push a new Docker image with your code in it and run that new image.
+With the help of docker volumes, you can still use any editor/IDE of your choice as you normally do. 
+You don’t need to run a VM and then ssh for development from the shell.
+
+>Standardization and Productivity
+>Compatibility and Maintainability
+>Simplicity and Faster Configurations
+>Rapid Deployment
+>Continuous Deployment and Testing
+>Isolation
+>Security
