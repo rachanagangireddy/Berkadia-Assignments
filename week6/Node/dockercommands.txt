@@ -549,3 +549,52 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 docker container stats	Display a live stream of container(s) resource usage statistics
 docker container stop	                   Stop one or more running containers
 docker container top              	Display the running processes of a container
+
+31.docker dockerd
+Launch the Docker daemon
+dockerd
+WARN[2018-12-23T13:47:31.330727154Z] Error while setting daemon root propagation, this is not generally critical but may cause some functionality to not work or fallback to less desirable behavior  dir=/var/lib/docker error="error getting daemon root's parent mount: Could not find source mount of /var/lib/docker"
+INFO[2018-12-23T13:47:31.331519840Z] libcontainerd: started new docker-containerd process  pid=5613
+INFO[0000] starting containerd                           module=containerd revision=773c489c9c1b21a6d78b5c538cd395416ec50f88 version=v1.0.3
+ERRO[0000] failed to change OOM score to -500            error="write /proc/5613/oom_score_adj: permissiondenied" module=containerd
+INFO[0000] loading plugin "io.containerd.content.v1.content"...  module=containerd type=io.containerd.content.v1
+INFO[0000] loading plugin "io.containerd.snapshotter.v1.btrfs"...  module=containerd type=io.containerd.snapshotter.v1
+WARN[0000] failed to load plugin io.containerd.snapshotter.v1.btrfs  error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.btrfs must be a btrfs filesystem to be used with the btrfs snapshotter" module=containerd
+INFO[0000] loading plugin "io.containerd.snapshotter.v1.overlayfs"...  module=containerd type=io.containerd.snapshotter.v1
+INFO[0000] loading plugin "io.containerd.metadata.v1.bolt"...  module=containerd type=io.containerd.metadata.v1
+WARN[0000] could not use snapshotter btrfs in metadata plugin  error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.btrfs must be a btrfs filesystem to be used with the btrfs snapshotter" module="containerd/io.containerd.metadata.v1.bolt"
+INFO[0000] loading plugin "io.containerd.differ.v1.walking"...  module=containerd type=io.containerd.differ.v1
+INFO[0000] loading plugin "io.containerd.gc.v1.scheduler"...  module=containerd type=io.containerd.gc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.containers"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.content"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.diff"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.events"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.healthcheck"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.images"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.leases"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.namespaces"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.snapshots"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.monitor.v1.cgroups"...  module=containerd type=io.containerd.monitor.v1
+INFO[0000] loading plugin "io.containerd.runtime.v1.linux"...  module=containerd type=io.containerd.runtime.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.tasks"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.version"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] loading plugin "io.containerd.grpc.v1.introspection"...  module=containerd type=io.containerd.grpc.v1
+INFO[0000] serving...                                    address="/var/run/docker/containerd/docker-containerd-debug.sock" module="containerd/debug"
+INFO[0000] serving...                                    address="/var/run/docker/containerd/docker-containerd.sock" module="containerd/grpc"
+INFO[0000] containerd successfully booted in 0.005280s   module=containerd
+ERRO[2018-12-23T13:47:31.354512864Z] 'overlay2' is not supported over overlayfs    storage-driver=overlay2
+ERRO[2018-12-23T13:47:31.354703369Z] 'overlay' is not supported over overlayfs     storage-driver=overlay
+WARN[2018-12-23T13:47:31.355501436Z] Unable to setup quota: operation not permitted
+
+INFO[2018-12-23T13:47:31.376372749Z] Graph migration to content-addressability took 0.00 seconds
+WARN[2018-12-23T13:47:31.376695847Z] Your kernel does not support cgroup rt period
+WARN[2018-12-23T13:47:31.376714223Z] Your kernel does not support cgroup rt runtime
+INFO[2018-12-23T13:47:31.377517481Z] Loading containers: start.
+WARN[2018-12-23T13:47:31.377793845Z] Running modprobe bridge br_netfilter failed with message: , error: exec: "modprobe": executable file not found in $PATH
+WARN[2018-12-23T13:47:31.377835929Z] Running modprobe nf_nat failed with message: ``, error: exec: "modprobe": executable file not found in $PATH
+WARN[2018-12-23T13:47:31.377879571Z] Running modprobe xt_conntrack failed with message: ``, error: exec: "modprobe": executable file not found in $PATH
+Error starting daemon: Error initializing network controller: error obtaining controller instance: failed to create NAT chain DOCKER: iptables failed: iptables -t nat -N DOCKER: iptables v1.6.0: can't initialize iptables table `nat': Permission denied (you must be root)
+Perhaps iptables or your kernel needs to be upgraded.
+ (exit status 3)
+
+32.docker pull image_name
